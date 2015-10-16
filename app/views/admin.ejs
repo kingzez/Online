@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>在线报名系统管理</title>
+    <meta name="description" content="online register" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/fonts.useso.css" type="text/css">
+    <link href="css/beyond.min.css"   rel="stylesheet" />
+    <link href="css/animate.min.css"  rel="stylesheet" />
+    <link href="css/dataTables.bootstrap.css"  rel="stylesheet" />
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="js/skins.min.js"  ></script>
+    <style>
+    body{
+        font-family:'Raleway', Roboto,sans-serif;
+    }
+    </style>
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <!-- Navbar Barnd -->
+                <div class="navbar-header pull-left">
+                    <a href="#" class="navbar-brand">
+                       <!--  <small> -->
+                            <p style="line-height:40px;text-align:right;"> 在线报名系统</p><!-- <img src="img/logo.png"  alt="" /> -->
+                        <!-- </small> -->
+                    </a>
+                </div>
+                <!-- /Navbar Barnd -->
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sidebar-collapse">
+                    <i class="collapse-icon fa fa-bars"></i>
+                </div>
+                <!-- /Sidebar Collapse -->
+                <!-- Account Area and Settings -->
+                <div class="navbar-header pull-right">
+                    <div class="navbar-account">
+                        <ul class="account-area">
+
+                            <li>
+                                <a class="wave in" id="time" title="Time" href="#">
+                                    <i class="icon glyphicon glyphicon-time"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class=" wave in login-area dropdown-toggle" data-toggle="dropdown">
+
+                                    <section>
+                                        <h2><span class="profile"><span id="Clock"></span></span></h2>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a class=" wave in login-area dropdown-toggle" data-toggle="dropdown">
+                                    <div class="avatar" title="View your public profile">
+                                       <i class="fa fa-adn fa-2x fa-spin"></i>
+                                    </div>
+                                    <section>
+                                        <h2><span class="profile"><span>Administrator</span></span></h2>
+                                    </section>
+                                </a>
+                                <!--Login Area Dropdown-->
+                                <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                    <li class="username"><a>David Stevenson</a></li>
+                                    <li class="email"><a>David.Stevenson@live.com</a></li>
+
+                                    <li class="dropdown-footer">
+                                        <a href="login.html" >
+                                            Sign out
+                                        </a>
+                                    </li>
+                                </ul>
+                                <!--/Login Area Dropdown-->
+                            </li>
+                            <!-- /Account Area -->
+                            <!--Note: notice that setting div must start right after account area list.
+                            no space must be between these elements-->
+                            <!-- Settings -->
+                        </ul><div class="setting">
+                            <a id="btn-setting" title="Setting" href="#">
+                                <i class="icon glyphicon glyphicon-cog"></i>
+                            </a>
+                        </div>
+                        <div class="setting-container">
+                            <label>
+                                <h3 style="margin-top:0; color:#fff">Have A Good Day !</h3>
+                            </label>
+                            <label>
+                        </div>
+                        <!-- Settings -->
+                    </div>
+                </div>
+                <!-- /Account Area and Settings -->
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+                <ul class="nav sidebar-menu">
+                    <!--Dashboard-->
+                    <li>
+                        <a href="index.php" >
+                            <i class="menu-icon glyphicon glyphicon-home"></i>
+                            <span class="menu-text"> 主页 </span>
+                        </a>
+                    </li>
+
+                    <!--Detail-->
+                    <li>
+                        <a href="detail.php" >
+                            <i class="menu-icon fa fa-calendar"></i>
+                            <span class="menu-text">
+                                详情页
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="versions.html">
+                            <i class="menu-icon glyphicon glyphicon-fire themesecondary"></i>
+                            <span class="menu-text">
+                                Version 1.0
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">User</a>
+                        </li>
+                        <li class="active">Detail</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Registration Info
+                            <small>
+                                <i class="fa fa-angle-right"></i>
+                                <span>报名信息</span>
+                            </small>
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="widget">
+                                <div class="widget-header ">
+                                    <span class="widget-caption">Registration Info</span>
+                                    <div class="widget-buttons">
+                                        <a href="#" data-toggle="maximize">
+                                            <i class="fa fa-expand"></i>
+                                        </a>
+                                        <a href="#" data-toggle="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="widget-body">
+                                    <table class="table table-striped table-bordered table-hover" id="simpledatatable1">
+                                        <thead>
+                                            <tr>
+
+                                                <!-- <th>
+                                                    <div class="checker"><span class=""><input type="checkbox" class="group-checkable" data-set="#flip .checkboxes"></span></div>
+                                                </th> -->
+                                                <th>
+                                                    
+                                                </th>
+                                                <th style="width:7%">
+                                                    姓名
+                                                </th>
+                                                <th style="width:6%">
+                                                    性别
+                                                </th>
+                                                <th style="width:14%">
+                                                    籍贯
+                                                </th>
+                                                <th>
+                                                    出生日期
+                                                </th>
+                                                <th style="width:13%">
+                                                    学院
+                                                </th>
+                                                <th style="width:8%">
+                                                    班级
+                                                </th>
+                                                <th>
+                                                    学号
+                                                </th>
+                                                <th>
+                                                    电话
+                                                </th>
+                                                <th>
+                                                    QQ
+                                                </th>
+                                                <th>
+                                                    志愿
+                                                </th>
+                                                <th style="width:9%">
+                                                    注册时间
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <?php 
+                                            while($row = mysqli_fetch_array($result))
+                                            {
+                                        ?>
+                                            <tr>
+                                                <!-- <td>
+                                                    <div class="checker"><span class=""><input type="checkbox" class="checkboxes" value="1"></span></div>
+                                                </td> -->
+                                                <td>
+                                                     <?php echo $row['id']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['name']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['gender']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['home']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['birth']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['college']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['class']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['stu_num']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['tel']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['qq']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo $row['desire']; ?>
+                                                </td>
+                                                <td>
+                                                     <?php echo substr($row['regdate'],2,9) ; ?>
+                                                </td>
+                                            </tr>
+                                        <?php 
+                                            }
+                                            mysqli_close($conn);
+                                         ?>    
+                                
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Container -->
+        <!-- Main Container -->
+
+    </div>
+
+    <!--Basic Scripts-->
+    <script src="js/jquery-2.0.3.min.js" ></script>
+    <script src="js/bootstrap.min.js" ></script>
+    <script src="js/slimscroll/jquery.slimscroll.min.js"  ></script>
+
+    <!--Beyond Scripts-->
+    <script src="js/beyond.min.js"  ></script>
+
+    <!--Page Related Scripts-->
+    <script src="js/datatable/jquery.dataTables.min.js"  ></script>
+    <script src="js/datatable/ZeroClipboard.js"  ></script>
+    <script src="js/datatable/dataTables.tableTools.min.js"  ></script>
+    <script src="js/datatable/dataTables.bootstrap.min.js"  ></script>
+    <script src="js/datatable/datatables-init.js" ></script>
+    <script>
+        InitiateSimpleDataTable.init();
+    </script>
+    <script> 
+        function tick() { 
+        var hours, minutes, seconds, xfile; 
+        var intHours, intMinutes, intSeconds; 
+        var today, theday; 
+        today = new Date(); 
+        function initArray(){ 
+        this.length=initArray.arguments.length 
+        for(var i=0;i<this.length;i++) 
+        this[i+1]=initArray.arguments[i] } 
+        var d=new initArray( 
+        " 星期日 ", 
+        " 星期一 ", 
+        " 星期二 ", 
+        " 星期三 ", 
+        " 星期四 ", 
+        " 星期五 ", 
+        " 星期六 "); 
+        theday = today.getFullYear()+"-" + [today.getMonth
+
+        ()+1]+"-" +today.getDate() + d[today.getDay()+1]; 
+        intHours = today.getHours(); 
+        intMinutes = today.getMinutes(); 
+        intSeconds = today.getSeconds(); 
+        if (intHours == 0) { 
+        hours = "24:"; 
+        // xfile = "午夜"; 
+        } else if (intHours < 24) { 
+        hours = intHours+":"; 
+        // xfile = "上午"; 
+        } else if (intHours == 24) { 
+        hours = "12:"; 
+        // xfile = "正午"; 
+        } else { 
+        intHours = intHours - 24 
+        hours = intHours + ":"; 
+        // xfile = "下午"; 
+        } 
+        if (intMinutes < 10) { 
+        minutes = "0"+intMinutes+":"; 
+        } else { 
+        minutes = intMinutes+":"; 
+        } 
+        if (intSeconds < 10) { 
+        seconds = "0"+intSeconds+" "; 
+        } else { 
+        seconds = intSeconds+" "; 
+        } 
+        timeString = theday+"  " + hours + minutes + seconds; 
+        Clock.innerHTML = timeString; 
+        window.setTimeout("tick();", 100); 
+        } 
+        window.onload = tick; 
+    </script>  
+</body>
+<!--  /Body -->
+</html>
