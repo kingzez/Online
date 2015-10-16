@@ -1,2 +1,2 @@
-#Online Reg
+#Online Registration System
 a exercise use nodejs mongodb express 
